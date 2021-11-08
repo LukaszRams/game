@@ -1,0 +1,146 @@
+* {
+    font-family: 'Segoe Print';
+}
+
+#frame {
+    margin: 10%;
+    margin-top: 10%;
+    border: 5px rgb(0, 238, 255) solid;
+    background-image: linear-gradient(rgb(40, 79, 75), rgb(98, 162, 155));
+    box-shadow: 0px 0px 20px rgb(0, 238, 255);
+    padding: 5px 20px;
+    border-radius: 50px;
+    position: relative;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 250%;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0%;
+}
+
+.description {
+    font-size: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.panel {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+/* Button */
+
+#button {
+    padding: 2px 10px;
+    height: 40px;
+    width: 100px;
+    border: 2px rgb(0, 238, 255) solid;
+    border-radius: 10px;
+    background-color: darkcyan;
+    font-size: 80%;
+    color: white;
+    transition: all 0.5s;
+}
+
+#button:hover {
+    background-color: rgb(0, 189, 189);
+    box-shadow: 0px 0px 10px rgb(1, 148, 148);
+}
+
+#button:active {
+    background-color: darkcyan;
+    box-shadow: 0px 0px 20px rgb(1, 148, 148);
+}
+
+
+/*  input field */
+
+#input {
+    width: 150px;
+    padding: 4px 0px 4px 20px;
+    border: 2px rgb(0, 238, 255) solid;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+#input:hover {
+    box-shadow: 0px 0px 10px rgb(1, 148, 148);
+}
+
+#input:focus {
+    outline: none;
+    border: 3px rgb(0, 238, 255) solid;
+    box-shadow: 0px 0px 20px rgb(1, 148, 148);
+}
+
+input:disabled {
+    visibility: hidden;
+    display: none;
+}
+
+#news {
+    font-size: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.answers {
+    box-shadow: 0px 20px 15px rgb(64, 107, 103);
+    max-height: 9999px;
+    border: 3px rgb(0, 238, 255) solid;
+    border-top: none;
+    padding: 0px;
+    border-radius: 0px 0px 50px 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: opacity 4s, max-height 30s;
+    will-change: opacity, max-height;
+}
+
+.answers.faded-out {
+    max-height: 0px;
+    opacity: 0;
+}
+
+.answers>p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 160%;
+    color: white;
+    text-shadow: 0px 0px 20px rgb(255, 255, 24);
+}
+
+.answers>p:hover {
+    cursor: pointer;
+}
+
+div>ul {
+    padding: 0px 80px;
+}
+
+div ul li {
+    width: 50%;
+    transform: translateX(calc(100% - 50px));
+    font-size: 100%;
+    text-shadow: 0px 0px 20px rgba(17, 1, 1, 0.549);
+}
+
+li {
+    max-height: 200px;
+    transition: opacity 4s, max-height 4s;
+    will-change: opacity, max-height;
+}
+
+li.faded-out {
+    opacity: 0;
+    max-height: 0px;
+}
