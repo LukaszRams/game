@@ -107,8 +107,11 @@ input:disabled {
 }
 
 .answers.faded-out {
-    max-height: 0px;
     opacity: 0;
+}
+
+.answers.faded-out.height-out {
+    max-height: 0px;
 }
 
 .answers>p {
