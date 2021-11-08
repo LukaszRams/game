@@ -102,29 +102,18 @@ function log_win(i) {
     try {
         var answers = document.getElementById("answers");
         answers.setAttribute("style", "max-height: " + answers.clientHeight + "px");
-        answers.setAttribute("style", "transition: opacity 1.2s, max-height " + answers.clientHeight / 120 + "s ease-out;");
-        console.log("transition: opacity 1.2s, max-height " + answers.clientHeight / 120 + "s ease-out;")
+        answers.setAttribute("style", "transition: opacity 1s ease-in, max-height " + answers.clientHeight / 200 + "s ease-out;");
+
         requestAnimationFrame(() => {
             answers.classList.add("faded-out");
         });
 
-        var interval2 = setInterval(faded, 16);
-        var interval3 = setInterval(heightOut, 16);
+        setTimeout(() => {
+            answers.parentNode.removeChild(answers, true);
+        }, answers.clientHeight / 0.2)
 
-        function faded() {
-            if (answers.style.opacity <= 0.1) {
-                answers.classList.add("height-out");
-                clearInterval(interval2);
-            }
-        }
+        answers.classList.add("height-out");
 
-        function heightOut() {
-            console.log(answers.clientHeight)
-            if (answers.clientHeight == 0) {
-                answers.remove();
-                clearInterval(interval3);
-            }
-        }
     } catch (TypeError) {}
     number.disabled = true;
     i = 0;
