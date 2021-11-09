@@ -50,7 +50,7 @@ function old_game() {
             box.appendChild(p);
             const ul = document.createElement("ul");
             box.appendChild(ul);
-            ul.id = "ul";
+            ul.setAttribute("id", "ul");
             const li = document.createElement("li");
             li.innerText = "Round 1: " + number.value;
             ul.appendChild(li);
