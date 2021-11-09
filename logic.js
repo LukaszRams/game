@@ -61,12 +61,16 @@ function old_game() {
 
             var interval = setInterval(() => { fadedOut() }, 16);
 
+            var ch = box.clientHeight;
+
             function fadedOut() {
                 if (box.clientHeight >= 115) {
                     clearInterval(interval);
                     requestAnimationFrame(() => {
                         box.classList.remove("faded-out");
                     });
+                } else {
+                    ch = box.clientHeight
                 }
             }
             var number = document.getElementById("input");
