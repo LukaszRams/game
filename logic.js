@@ -64,7 +64,9 @@ function old_game() {
             function fadedOut() {
                 if (box.clientHeight >= 115) {
                     clearInterval(interval);
-                    box.classList.remove("faded-out");
+                    requestAnimationFrame(() => {
+                        box.classList.remove("faded-out");
+                    });
                 }
             }
             var number = document.getElementById("input");
