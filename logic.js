@@ -59,20 +59,10 @@ function old_game() {
                 box.classList.remove("height-out");
             });
 
-            var interval = setInterval(() => { fadedOut() }, 16);
+            requestAnimationFrame(() => {
+                box.classList.remove("faded-out");
+            });
 
-            var ch = box.clientHeight;
-
-            function fadedOut() {
-                if (box.clientHeight - ch <= 10) {
-                    clearInterval(interval);
-                    requestAnimationFrame(() => {
-                        box.classList.remove("faded-out");
-                    });
-                } else {
-                    ch = box.clientHeight
-                }
-            }
             var number = document.getElementById("input");
             number.value = nr;
 
