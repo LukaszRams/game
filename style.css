@@ -138,7 +138,6 @@ div ul li {
 }
 
 li {
-    list-style-type: square;
     max-height: 200px;
     transition: opacity 4s, max-height 4s;
     will-change: opacity, max-height;
