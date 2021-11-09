@@ -60,7 +60,7 @@ function old_game() {
             });
 
             requestAnimationFrame(() => {
-                box.classList.remove("faded-out");
+                document.getElementById("answers").classList.remove("faded-out");
             });
 
             var number = document.getElementById("input");
