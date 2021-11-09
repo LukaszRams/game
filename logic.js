@@ -64,7 +64,7 @@ function old_game() {
             var ch = box.clientHeight;
 
             function fadedOut() {
-                if (box.clientHeight >= 115) {
+                if (box.clientHeight - ch <= 10) {
                     clearInterval(interval);
                     requestAnimationFrame(() => {
                         box.classList.remove("faded-out");
